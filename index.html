@@ -7,7 +7,112 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+     <main class="contenedor-login">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="./assets/img/logo.png" alt="Logo del gimnasio">
+    </div>
+
+    <!-- Formulario de Login -->
+    <form class="form-login" id="form-login">
+      <h2>Iniciar Sesión</h2>
+
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+
+      <label for="password">Contraseña</label>
+      <div class="input-password">
+        <input type="password" id="password" name="password" placeholder="********" required>
+        <button type="button" id="togglePassword">👁</button>
+      </div>
+
+      <div class="check-sesion">
+        <input type="checkbox" id="mantener-sesion">
+        <label for="mantener-sesion">Mantener sesión iniciada</label>
+      </div>
+
+      <button type="submit" class="btn-login">Iniciar Sesión</button>
+
+      <p class="registro-link">¿No tenés cuenta?
+        <button type="button" id="btn-abrir-registro">Registrate</button>
+      </p>
+    </form>
+
+    <!-- Modal de error -->
+    <div class="modal" id="modal-error">
+      <div class="modal-contenido">
+        <p>No tenemos ningún registro con esos datos. Revisá tus datos o registrate como nuevo usuario.</p>
+        <button id="btn-cerrar-modal">Aceptar</button>
+      </div>
+    </div>
+
+    <!-- Formulario de Registro (oculto al inicio) -->
+    <form class="form-registro oculto" id="form-registro">
+      <h2>Registro de Nuevo Usuario</h2>
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" required>
+
+      <label for="edad">Edad</label>
+      <input type="number" id="edad" required>
+
+      <label for="sexo">Sexo</label>
+      <select id="sexo" required>
+        <option value="">Seleccionar</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="peso">Peso (kg)</label>
+      <input type="number" id="peso" required>
+
+      <label for="altura">Altura (cm)</label>
+      <input type="number" id="altura" required>
+
+      <label for="tipo-entrenamiento">Tipo de Entrenamiento</label>
+      <select id="tipo-entrenamiento" required>
+        <option value="">Seleccionar</option>
+        <option value="musculacion">Musculación</option>
+        <option value="calistenia">Calistenia</option>
+        <option value="crossfit">CrossFit</option>
+        <option value="rehabilitacion">Lesionado</option>
+        <option value="funcional">Funcional</option>
+      </select>
+
+      <label for="dias">Días por semana</label>
+      <select id="dias" required>
+        <option value="">Seleccionar</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+
+      <label for="nivel">Nivel</label>
+      <select id="nivel" required>
+        <option value="">Seleccionar</option>
+        <option value="principiante">Principiante</option>
+        <option value="basico">Básico</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="avanzado">Avanzado</option>
+      </select>
+
+      <label for="meta">Meta de entrenamiento</label>
+      <input type="text" id="meta" required>
+
+      <label for="observacion">Observación médica</label>
+      <textarea id="observacion" rows="3"></textarea>
+
+      <button type="submit" class="btn-registrar">Crear Cuenta</button>
+    </form>
+
+  </main>
 
 
     <script src="./js/script.js"></script>
