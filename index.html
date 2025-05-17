@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoginEyS</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoginEyS</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-     <main class="contenedor-login">
+  
+  <main class="contenedor-login">
 
     <!-- Logo -->
+
     <div class="logo">
       <img src="./assets/img/logo.png" alt="Logo del gimnasio">
     </div>
 
     <!-- Formulario de Login -->
+
     <form class="form-login" id="form-login">
       <h2>Iniciar Sesión</h2>
 
@@ -39,7 +44,17 @@
       </p>
     </form>
 
+    <!-- Modal éxito login -->
+
+    <div class="modal" id="modal-login-exito">
+      <div class="modal-contenido">
+        <p>¡Inicio de sesión exitoso!</p>
+        <button id="btn-cerrar-login-exito">Aceptar</button>
+      </div>
+    </div>
+
     <!-- Modal de error -->
+
     <div class="modal" id="modal-error">
       <div class="modal-contenido">
         <p>No tenemos ningún registro con esos datos. Revisá tus datos o registrate como nuevo usuario.</p>
@@ -47,7 +62,8 @@
       </div>
     </div>
 
-    <!-- Formulario de Registro (oculto al inicio) -->
+    <!-- Formulario de Registro -->
+
     <form class="form-registro oculto" id="form-registro">
       <h2>Registro de Nuevo Usuario</h2>
 
@@ -109,12 +125,33 @@
       <label for="observacion">Observación médica</label>
       <textarea id="observacion" rows="3"></textarea>
 
+      <label for="password">Crear contraseña</label>
+      <div class="input-password">
+        <input type="password" id="password-registro" placeholder="Contraseña" required>
+        <button type="button" id="togglePasswordRegistro">👁</button>
+      </div>
+
+      <label for="confirm-password">Confirmar contraseña</label>
+      <div class="input-password">
+        <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+        <button type="button" id="toggleConfirmPassword">👁</button>
+      </div>
+
       <button type="submit" class="btn-registrar">Crear Cuenta</button>
     </form>
 
+    <!-- Modal de registro exitoso -->
+
+    <div class="modal" id="modal-exito">
+      <div class="modal-contenido">
+        <p>¡Cuenta creada exitosamente!</p>
+        <button id="btn-cerrar-exito">Aceptar</button>
+      </div>
+    </div>
+
   </main>
 
-
-    <script src="./js/script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
