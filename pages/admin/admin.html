@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador EyS</title>
+    <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+    <main class="contenedor-admin">
+        <h1>Panel de Administración</h1>
+
+        <!-- Buscador -->
+        <div class="buscador">
+            <input type="text" id="buscar-alumno" placeholder="Buscar alumno por nombre...">
+        </div>
+
+        <!-- Tabla de alumnos -->
+        <table id="tabla-alumnos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Edad</th>
+                    <th>Tipo de Entrenamiento</th>
+                    <th>Nivel</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Acá con JS cargamos los alumnos -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
